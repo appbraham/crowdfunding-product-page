@@ -1,0 +1,245 @@
+:root{
+    --moderate-cyan: hsl(176, 50%, 47%);
+    --dark-cyan: hsl(176, 72%, 28%);
+
+    --white: hsl(0, 100%, 100%);
+    --black: hsl(0, 0%, 0%);
+    --dark-gray: hsl(0, 0%, 48%);
+    --light-gray: hsl(0, 0%, 80%);
+    --very-light-gray: hsl(0, 0%, 98%);
+    --smoke: hsl(0, 0%, 90%);
+
+    --separator: 1px solid var(--light-gray);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 16px;
+}
+
+body{
+    font-family: 'Commissioner', sans-serif;
+}
+
+ul{
+    list-style: none;
+}
+
+.header{
+    background-image: url("../images/image-hero-mobile.jpg");
+    height: 300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.logo.activate{
+    z-index: 100;
+}
+
+.hamburger-icon{
+    background-image: url("../images/icon-hamburger.svg");
+    background-repeat: no-repeat;
+    height: 20px;
+    width: 20px;
+}
+.hamburger-icon.activate{
+    background-image: url("../images/icon-close-menu.svg");
+    z-index: 100;
+}
+
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 1.25rem;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar>div{
+    display: none;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    padding: 0 1.2rem;
+    background-color: hsla(0, 0%, 0%, 0.3);
+}
+
+.nav{
+    position: relative;    
+    top: 87px;
+    width: 100%; 
+    width: 100%;
+    background-color: var(--white);
+    border-radius: 0.5rem;
+}
+
+.nav-container.activate{
+    display: block;
+}
+
+.nav ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.nav ul li{
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding: 1.5rem 1.2rem;
+}
+.nav ul li:nth-child(even){    
+    border-top: var(--separator);
+    border-bottom: var(--separator);
+}
+
+main{
+    background-color: var(--very-light-gray);
+    position: relative;
+}
+
+.section-frame{
+    border: 1px solid var(--light-gray);
+    border-radius: 0.5rem;
+    background-color: var(--white);
+    box-shadow: 0 1px 3px hsla(0, 0%, 0%, 0.12);
+    padding: 1.2rem;
+
+}
+
+.master-container{
+    position: absolute;
+    top: -85px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1.2rem;
+}
+
+.master-project{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    align-items: center;
+    padding: 3.5rem 1.2rem 2.5em;
+    position: relative;
+}
+.master-project>img{
+    position: absolute;
+    top: 0;
+    transform: translateY(-50%);
+}
+
+.master-project h1{
+    font-size: 1.5rem;
+}
+.master-project p{
+    font-size: 0.9rem;
+    color: var(--dark-gray);
+}
+
+.master-project__buttons{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+.button{
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 700;    
+    background-color: var(--moderate-cyan);
+    padding: 1.2rem 3rem;
+    border: 0;
+    border-radius: 2rem;
+}
+
+.sponsorship{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2.5rem 1.2rem;
+
+}
+/* .sponsorship div{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+} */
+.sponsorship div:nth-child(even){
+    padding: 1rem 0;
+    position: relative;
+    /* border-top: var(--separator);
+    border-bottom: var(--separator); */
+}
+
+.sponsorship div:nth-child(even)::before{
+    content: '';
+    position: absolute;
+    width: 85px;
+    height: 2px;
+    top: 0.1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--smoke);
+}
+.sponsorship div:nth-child(even)::after{
+    content: '';
+    position: absolute;
+    width: 85px;
+    height: 2px;
+    top: 110%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--smoke);
+}
+
+.sponsorship div h2{
+    font-size: 2rem;
+    font-weight: 700;
+}
+.sponsorship div p{
+    color: var(--dark-gray);
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: .5rem;
+}
+
+.progress-bar{
+    position: relative;    
+    width: 100%;
+}
+.progress-bar::before, .progress-bar::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-radius: 0.5rem;
+}
+.progress-bar::before{
+    width: 100%;
+    background-color: var(--smoke);
+}
+.progress-bar::after{
+    width: 70%;
+    background-color: var(--moderate-cyan);    
+}
