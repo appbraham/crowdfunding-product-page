@@ -1,5 +1,5 @@
 :root{
-    --moderate-cyan: hsl(176, 50%, 47%);
+    --moderate-cyan: hsl(176, 50%, 47%);    
     --dark-cyan: hsl(176, 72%, 28%);
 
     --white: hsl(0, 100%, 100%);
@@ -169,6 +169,10 @@ main{
     border: 0;
     border-radius: 2rem;
 }
+.button-reward{
+    font-size:0.9rem;
+    padding: 1rem 2rem;
+}
 
 .sponsorship{
     text-align: center;
@@ -176,19 +180,11 @@ main{
     flex-direction: column;
     gap: 1.5rem;
     padding: 2.5rem 1.2rem;
-
 }
-/* .sponsorship div{
-    text-align: center;
-    display: flex;
-    flex-direction: column;
 
-} */
 .sponsorship div:nth-child(even){
     padding: 1rem 0;
     position: relative;
-    /* border-top: var(--separator);
-    border-bottom: var(--separator); */
 }
 
 .sponsorship div:nth-child(even)::before{
@@ -243,3 +239,92 @@ main{
     width: 70%;
     background-color: var(--moderate-cyan);    
 }
+
+/* PLEDGE SECTION */
+.section-pledge{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.section-pledge h2{
+    padding-top: 1.5rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+.section-pledge p{
+    line-height: 1.5;
+    color: var(--dark-gray);
+}
+
+.pledge-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.pledge{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.pledge .pledge-title h3{
+    font-size: 1rem;
+    font-weight: 700;
+}
+.pledge .pledge-title span{
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--moderate-cyan);
+    display: block;
+    margin-top: 0.4rem;
+}
+
+.pledge .pledge-reward div{
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    margin-bottom: 1.5rem; 
+}
+
+.pledge .pledge-reward div span:first-child{
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+.pledge .pledge-reward div span:last-child{
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--dark-gray);
+}
+
+/***** OUT STOCK STYLE *****/
+
+.pledge .pledge-title .disable-title{
+    color: #818181;
+}
+.pledge .pledge-title .disable-amount{
+    color: #A2D8D0;
+}
+
+.pledge .disable-description{
+    color: var(--light-gray);
+}
+
+.pledge .pledge-reward .disable-reward{
+    color: var(--dark-gray);
+}
+
+.button-reward-disabled{
+    background-color: var(--light-gray);
+}
+
+/* Modal */
+
+.modal{
+    display: none; 
+}
+.modal-project{
+
+}
+
